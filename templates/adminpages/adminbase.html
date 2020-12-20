@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>{% block title %}admin base {% endblock %}</title>
+
+
+</head>
+<body>
+<div class="container">
+    <a href="{% url 'store:adminhome' %}">Home</a> |
+    <a href="{% url 'store:adminorderlist' %}">All Orders</a> |
+    <a href="{% url 'store:adminproductlist' %}">All Product</a> |
+    <a href="{% url 'store:home' %}" target="_blank">Visit Site</a> |
+
+
+
+    </div>
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

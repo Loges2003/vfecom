@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact form{% endblock %}
+
+{% block content %}
+
+
+
+<div class="section-heading">
+    <h2>Get in touch</h2><hr>
+
+
+{% if message_name %}
+    <h3>Thanks {{message_name}} !</h3>
+    <p>We received your email and respond back shortly..</p>
+{% else %}
+        <div class="line"></div>
+        </div>
+        <div class="container">
+        <div class="row">
+        <div class="col-md-8">
+            <form class="POST" >
+            {% csrf_token %}
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <input type="text" name="message-name" class="form-control mb-30" placeholder="Your name">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <input type="text" name="message-email" class="form-control mb-30" placeholder="Your Email">
+                    </div>
+
+                    <div class="col-lg-12">
+                        <textarea type="text" name="message" class="form-control mb-30" placeholder="Please enter your message"></textarea>
+                     </div><br>
+
+                    <div class="col-12">
+                        <button class="btn btn-info" type="submit" value="Send">Submit</button>
+                     </div>
+                </div>
+
+            </form>
+            </div>
+
+        </div>
+{% endif %}
+
+</div>
+
+
+
+
+{% endblock %}
